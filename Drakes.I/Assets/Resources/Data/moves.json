@@ -1,0 +1,52 @@
+{
+"moves": [
+  {
+    "ID": 100,
+    "name": "Pounce",
+    "isAttack": "TRUE",
+    "attackValue": 1,
+    "accuracyValue": 1,
+    "effectTag": null
+  },
+  {
+    "ID": 101,
+    "name": "Swipe",
+    "isAttack": "TRUE",
+    "attackValue": 1,
+    "accuracyValue": 1,
+    "effectTag": "other.accuracy.lower"
+  },
+  {
+    "ID": 102,
+    "name": "Hunker Down",
+    "isAttack": "FALSE",
+    "attackValue": 0,
+    "accuracyValue": 0,
+    "effectTag": "self.defense.raise"
+  },
+  {
+    "ID": 103,
+    "name": "Limber Up",
+    "isAttack": "FALSE",
+    "attackValue": 0,
+    "accuracyValue": 0,
+    "effectTag": "self.speed.raise"
+  },
+  {
+    "ID": 104,
+    "name": "Wild Thrash",
+    "isAttack": "TRUE",
+    "attackValue": 2,
+    "accuracyValue": 1,
+    "effectTag": "self.accuracy.lower"
+  },
+  {
+    "ID": 105,
+    "name": "Slow Crab",
+    "isAttack": "TRUE",
+    "attackValue": 1,
+    "accuracyValue": 2,
+    "effectTag": "other.accuracy.raise"
+  }
+]
+}
