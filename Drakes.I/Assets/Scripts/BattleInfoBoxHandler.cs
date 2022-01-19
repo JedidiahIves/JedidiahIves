@@ -62,5 +62,6 @@ public class BattleInfoBoxHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if(health != (float)(drake.life) / (float)(drake.stats[0])) { health = (float)(drake.life) / (float)(drake.stats[0]); Debug.Log("health value updated " + drake.name); }
     }
 }
