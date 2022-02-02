@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Move_Button
+  - Enemy
   layers:
   - Default
   - TransparentFX

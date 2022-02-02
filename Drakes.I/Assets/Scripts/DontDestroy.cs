@@ -61,7 +61,7 @@ public class DontDestroy : MonoBehaviour
         if (movesData == null) {
             Debug.Log("moves data is empty broh");
         } else {
-            DebugListMovesInfo(movesData, 0);
+            //DebugListMovesInfo(movesData, 0);
         }
         
     }

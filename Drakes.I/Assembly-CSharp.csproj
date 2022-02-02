@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\DataSaver.cs" />
     <Compile Include="Assets\Scripts\BattleInfoBoxHandler.cs" />
     <Compile Include="Assets\Scripts\MoveButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\MoveEffects.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

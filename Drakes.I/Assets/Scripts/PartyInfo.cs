@@ -3,6 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum statIndex {
+    hp,
+    attack,
+    defense,
+    speed,
+    fire,
+    water,
+    lightning,
+    earth,
+    leaf
+}
+
 [Serializable]
 public class Moves {
     public int ID;

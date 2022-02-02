@@ -6,11 +6,19 @@ using UnityEngine.UI;
 public class MoveButtonHandler : MonoBehaviour
 {
     public Moves theMove;
-
+    public MoveEffects effects;
+    public string[] tags;
 
     public void PopulateMove(int index) {
         theMove = GameObject.Find("Dont Destroy").GetComponent<DontDestroy>().movesData.moves[index];
         gameObject.GetComponentInChildren<Text>().text = theMove.name;
+        if (theMove.effectTag == null || theMove.effectTag == "") {
+            Debug.Log("effect tag empty");
+        } else {
+            effects = gameObject.AddComponent<MoveEffects>();
+            tags = effects.ParseTag(theMove.effectTag);
+        }
+
      }
 
     public void PerformMove() {
@@ -20,7 +28,7 @@ public class MoveButtonHandler : MonoBehaviour
 
         /* checks to see if the move hits. subtracts the accuracy from the calculated evasion. if calculated evasion is lower than the accuracy, 
         it always hits, other wise the chance to hit is the difference between the values*/
-        if (((((float)enemyDrake.stats[1] + (float)enemyDrake.stats[2]) / 50f) - (float)theMove.accuracyValue) / 10f > Random.value) {
+        if (((((float)enemyDrake.stats[1] + (float)enemyDrake.stats[2]) / 50f) - (float)theMove.accuracyValue) / 10f < Random.value) {
             int damage = Mathf.CeilToInt(Mathf.Pow((float)playerDrake.stats[1], .5f + ((float)theMove.attackValue / 25) + Random.Range(0f, .1f)));
             Debug.Log(enemyDrake.life + " - " + damage);
             enemyDrake.life -= damage;
